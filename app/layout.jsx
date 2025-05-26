@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (<html lang="en" className="scroll-smooth">
     <body className="bg-gradient-to-br from-indigo-100 via-white to-cyan-100">
       <Header />
-      {children}
+      <main className="container mx-auto px-6 py-8">{children}</main>
       <Footer />
     </body>
   </html>)
