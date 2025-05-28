@@ -1,5 +1,5 @@
 export default function Job({ job }) {
-    return (<div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+    return (<div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-500 hover:shadow-xl transition-shadow duration-300">
         <div className="flex justify-between items-start mb-2">
             <div>
                 <h3 className="text-xl font-semibold text-indigo-700">{job.title}</h3>

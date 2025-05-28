@@ -10,7 +10,7 @@ export default function Project({ project }) {
         <div className="w-full relative aspect-video hover:cursor-pointer">
             <Image
                 src={project.image}
-                alt="Project Alpha"
+                alt={`${project.name} Home Page`}
                 fill={true}
             />
         </div>
