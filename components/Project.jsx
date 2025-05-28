@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { FaGithub } from "react-icons/fa"
+import { FaLink } from "react-icons/fa6"
 import IconLinks from "./IconLinks"
 
 export default function Project({ project }) {
@@ -25,8 +25,8 @@ export default function Project({ project }) {
                 </span>))}
             </div>
             <div className="flex space-x-2 mt-4">
-                <IconLinks icon={faLink} link={project.link} />
-                <IconLinks icon={faGithub} link={project.code} />
+                <IconLinks Icon={FaLink} link={project.link} />
+                <IconLinks Icon={FaGithub} link={project.code} />
             </div>
         </div>
     </div>)

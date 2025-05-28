@@ -1,10 +1,9 @@
 import Link from "next/link"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function IconLinks({ icon, link }) {
+export default function IconLinks({ Icon, link }) {
     return (<>
         {link && (<Link href={link} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={icon} className="text-indigo-600 w-7 h-7 hover:text-indigo-700 transition-300" />
+            <Icon size={25} className="text-indigo-600 hover:text-indigo-700 transition-300" />
         </Link>)}
     </>)
 }

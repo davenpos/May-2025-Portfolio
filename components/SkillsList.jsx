@@ -1,4 +1,7 @@
-import { faHtml5, faCss } from '@fortawesome/free-brands-svg-icons'
+import { FaHtml5, FaCss3, FaPhp } from "react-icons/fa"
+import { IoLogoJavascript } from "react-icons/io5"
+//import { faHtml5, faCss, faJs, faPhp, faNodeJs, faWordpress } from '@fortawesome/free-brands-svg-icons'
+//import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import SkillIcon from './SkillIcon'
 
 export default function SkillsList() {
@@ -6,12 +9,22 @@ export default function SkillsList() {
         {
             name: "HTML",
             color: "orange",
-            icon: faHtml5
+            icon: FaHtml5
         },
         {
             name: "CSS",
             color: "cyan",
-            icon: faCss
+            icon: FaCss3
+        },
+        {
+            name: "JavaScript",
+            color: "yellow",
+            icon: IoLogoJavascript
+        },
+        {
+            name: "PHP",
+            color: "indigo",
+            icon: FaPhp
         }
     ]
 
@@ -21,7 +34,7 @@ export default function SkillsList() {
             {skills.map(skill => <SkillIcon
                 key={skill.name}
                 name={skill.name}
-                icon={skill.icon}
+                Icon={skill.icon}
                 color={skill.color}
             />)}
         </div>
