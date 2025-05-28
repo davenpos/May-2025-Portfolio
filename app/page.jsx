@@ -1,11 +1,11 @@
 import About from "@/components/About"
 import ProjectsList from "@/components/ProjectsList"
-import Skills from "@/components/Skills"
+import SkillsList from "@/components/SkillsList"
 
 export default function Page() {
     return (<>
         <About />
         <ProjectsList />
-        <Skills />
+        <SkillsList />
     </>)
 }
