@@ -2,6 +2,7 @@ import About from "@/components/About"
 import ProjectsList from "@/components/ProjectsList"
 import SkillsList from "@/components/SkillsList"
 import WorkExperience from "@/components/WorkExperience"
+import Contact from "@/components/Contact"
 
 export default function Page() {
     return (<>
@@ -9,5 +10,6 @@ export default function Page() {
         <ProjectsList />
         <SkillsList />
         <WorkExperience />
+        <Contact />
     </>)
 }
