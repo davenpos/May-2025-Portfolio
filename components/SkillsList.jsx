@@ -21,7 +21,7 @@ export default function SkillsList() {
         },
         {
             type: "Other",
-            skills: ["GitHub", "Webpack", "AWS EC2", "Android", "Stripe", "SendGrid"]
+            skills: ["Git", "Webpack", "AWS EC2", "Android", "Stripe", "SendGrid"]
         }
     ]
 

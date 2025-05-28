@@ -35,6 +35,7 @@ export default function getLogo(skill) {
     let icon
     if (skill === "WC") skill = "WooCommerce"
     if (skill === "Android") skill = "Android Studio"
+    if (skill === "SASS" || skill === "SCSS") skill = "SASS/SCSS"
 
     switch (skill) {
         case "HTML":
@@ -129,7 +130,7 @@ export default function getLogo(skill) {
             classes = "bg-emerald-400 text-emerald-800"
             icon = SiMongodb
             break
-        case "GitHub":
+        case "Git":
             classes = "bg-orange-400 text-orange-800"
             icon = FaGitAlt
             break
