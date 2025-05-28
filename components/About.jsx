@@ -1,13 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import photo from '@/public/SD.jpg'
 
 export default function About() {
     return (<section id="about" className="py-16">
         <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/3 flex justify-center">
                 <Image
-                    src={photo.src}
+                    src="/images/SD.jpg"
                     alt="Simeon Davenport"
                     width={50}
                     height={50}
