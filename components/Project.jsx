@@ -1,8 +1,6 @@
 import Image from "next/image"
-import Link from "next/link"
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import IconLinks from "./IconLinks"
 
 export default function Project({ project }) {
