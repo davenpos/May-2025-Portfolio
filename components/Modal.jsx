@@ -2,10 +2,12 @@
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 
-export default function Modal({ children, onClose }) {
+export default function Modal({ children, onClose, closeSetter }) {
     const [exiting, setExiting] = useState(false)
 
     useEffect(() => {
+        if (closeSetter) closeSetter(() => handleClose)
+
         const handleEscape = e => {
             if (e.key === "Escape") onClose()
         }

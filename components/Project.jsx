@@ -10,6 +10,7 @@ import ProjectSkills from "./ProjectSkills"
 
 export default function Project({ project }) {
     const [showOverlay, setShowOverlay] = useState(false)
+    const [requestModalClose, setRequestModalClose] = useState(null)
 
     useEffect(() => {
         document.body.style.overflow = showOverlay ? "hidden" : ""
@@ -46,10 +47,13 @@ export default function Project({ project }) {
             </div>
         </div>
 
-        {showOverlay && (<Modal onClose={() => setShowOverlay(false)}>
+        {showOverlay && (<Modal
+            onClose={() => setShowOverlay(false)}
+            closeSetter={setRequestModalClose}
+        >
             <button
                 className="absolute top-2 right-5 text-gray-600 hover:text-black text-2xl"
-                onClick={() => setShowOverlay(false)}
+                onClick={() => requestModalClose && requestModalClose()}
             >
                 <IoClose className="cursor-pointer transition-colors duration-300" />
             </button>
