@@ -10,7 +10,7 @@ export default function SkillsList() {
         },
         {
             type: "Frontend",
-            skills: ["React", "Next.js", "jQuery", "SASS/SCSS", "Tailwind", "WordPress", "WC", "Bootstrap"]
+            skills: ["React", "Next.js", "jQuery", "SASS/SCSS", "Tailwind", "WordPress", "WooCommerce", "Bootstrap"]
         },
         {
             type: "Backend",
@@ -32,7 +32,7 @@ export default function SkillsList() {
             <h3 className="section-title text-3xl font-bold text-center my-6 text-gray-800">
                 {subset.type}
             </h3>
-            <div className="flex flex-wrap justify-center gap-8 text-center mx-8">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-8 text-center mx-3 md:mx-8">
                 {subset.skills.map(skill => <SkillIcon key={skill} name={skill} />)}
             </div>
         </Fragment>))}

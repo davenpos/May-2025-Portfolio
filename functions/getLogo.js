@@ -33,7 +33,6 @@ import { GrMysql } from "react-icons/gr"
 export default function getLogo(skill) {
     let classes
     let icon
-    if (skill === "WC") skill = "WooCommerce"
     if (skill === "Android") skill = "Android Studio"
     if (skill === "SASS" || skill === "SCSS") skill = "SASS/SCSS"
 

@@ -75,7 +75,7 @@ export default function Project({ project }) {
                     <IconLinks Icon={FaGithub} link={project.code} />
                 </div>
             </div>
-            <p className="text-gray-700 whitespace-pre-line text-md">
+            <p className="text-gray-700 whitespace-pre-line text-sm md:text-md">
                 {project.description.long}
             </p>
         </Modal>)}
