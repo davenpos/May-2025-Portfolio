@@ -5,7 +5,7 @@ export default function ProjectsList() {
     const projects = [
         {
             name: "PROJXON website",
-            image: "/images/projects/PROJXON website.png",
+            image: "/images/projects/projxon-website.png",
             description: {
                 brief: "PROJXON's website, built with Next.js and React with improved SEO and performance and deployed with AWS EC2.",
                 long: "I helped rebuild the PROJXON website from React to Next.js to improve SEO, working with three others over three weeks. I optimized code using DRY principles, integrated blogs and testimonials from a headless WordPress via the REST API, and enabled logged-in users to add testimonials. I implemented SSG and ISR for efficient data fetching and added metadata. This project enhanced my skills in React Bootstrap, internal API calls in Next.js, and balancing static and dynamic rendering for performance."
