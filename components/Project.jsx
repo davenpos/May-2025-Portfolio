@@ -27,6 +27,7 @@ export default function Project({ project }) {
                     src={project.image}
                     alt={`${project.name} Home Page`}
                     fill={true}
+                    className="hover:opacity-50 transition-color duration-300"
                 />
             </div>
             <div className="p-6">
@@ -40,7 +41,7 @@ export default function Project({ project }) {
                 <div className="flex flex-wrap space-x-1">
                     <ProjectSkills project={project} />
                 </div>
-                <div className="flex space-x-2 mt-4">
+                <div className="flex space-x-2 mt-2">
                     <IconLinks Icon={FaLink} link={project.link} />
                     <IconLinks Icon={FaGithub} link={project.code} />
                 </div>
@@ -71,7 +72,7 @@ export default function Project({ project }) {
                 {project.name}
             </h3>
             <div className="flex justify-between items-center">
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-center gap-y-1 gap-x-2">
                     <ProjectSkills project={project} />
                 </div>
                 <div className="flex space-x-2">
@@ -79,7 +80,7 @@ export default function Project({ project }) {
                     <IconLinks Icon={FaGithub} link={project.code} />
                 </div>
             </div>
-            <p className="text-gray-700 whitespace-pre-line text-sm md:text-md">
+            <p className="text-gray-700 whitespace-pre-line text-sm md:text-base">
                 {project.description.long}
             </p>
         </Modal>)}
