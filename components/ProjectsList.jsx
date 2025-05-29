@@ -1,4 +1,5 @@
 import Project from "./Project"
+import SectionTitle from "./SectionTitle"
 
 export default function ProjectsList() {
     const projects = [
@@ -36,7 +37,7 @@ export default function ProjectsList() {
     ]
 
     return (<section id="projects" className="py-16">
-        <h2 className="section-title text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h2>
+        <SectionTitle text="Featured Projects" mb={12} />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map(project => <Project key={project.name} project={project} />)}
         </div>

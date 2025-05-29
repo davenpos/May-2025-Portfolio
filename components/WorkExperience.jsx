@@ -1,4 +1,5 @@
 import Job from "./Job"
+import SectionTitle from "./SectionTitle"
 
 export default function WorkExperience() {
     const jobs = [
@@ -43,7 +44,7 @@ export default function WorkExperience() {
         }
     ]
     return (<section id="experience" className="py-16">
-        <h2 className="section-title text-4xl font-bold text-center mb-12 text-gray-800">Work Experience</h2>
+        <SectionTitle text="Work Experience" mb={12} />
         <div className="space-y-8 max-w-3xl mx-auto">
             {jobs.map((job, i) => <Job key={i} job={job} />)}
         </div>

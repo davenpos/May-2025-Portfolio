@@ -1,10 +1,11 @@
 import Link from "next/link"
 import { IoMdMail } from "react-icons/io"
 import { FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa"
+import SectionTitle from "./SectionTitle"
 
 export default function Contact() {
     return (<section id="contact" className="py-16">
-        <h2 className="section-title text-4xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
+        <SectionTitle text="Get In Touch" mb={12} />
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg text-center">
             <p className="text-lg text-gray-600 mb-8">
                 I'm currently open to new opportunities and collaborations. If you have a project in mind, want to discuss web dev or programming, or just want to say hello, feel free to reach out!

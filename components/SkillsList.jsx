@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import SkillIcon from './SkillIcon'
+import SectionTitle from "./SectionTitle"
 
 export default function SkillsList() {
     const skillset = [
@@ -26,7 +27,7 @@ export default function SkillsList() {
     ]
 
     return (<section id="skills" className="py-16 bg-white rounded-xl shadow-md">
-        <h2 className="section-title text-4xl font-bold text-center mb-8 text-gray-800">My Skillset</h2>
+        <SectionTitle text="My Skillset" mb={8} />
         {skillset.map(subset => (<Fragment key={subset.type}>
             <h3 className="section-title text-3xl font-bold text-center my-6 text-gray-800">
                 {subset.type}
