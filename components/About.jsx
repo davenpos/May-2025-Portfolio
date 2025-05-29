@@ -2,15 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function About() {
-    return (<section id="about" className="py-16">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+    return (<section id="about" className="py-0 md:py-16">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <div className="md:w-1/3 flex justify-center">
                 <Image
                     src="/images/SD.jpg"
                     alt="Simeon Davenport"
-                    width={50}
-                    height={50}
-                    className="rounded-full shadow-lg w-50 h-50 object-cover border-4 border-indigo-200"
+                    width={250}
+                    height={250}
+                    className="rounded-full shadow-lg object-cover border-4 border-indigo-200"
                 />
             </div>
             <div className="md:w-2/3 text-center md:text-left">
