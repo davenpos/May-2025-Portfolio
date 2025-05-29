@@ -2,6 +2,7 @@ import Link from "next/link"
 import { IoMdMail } from "react-icons/io"
 import { FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa"
 import SectionTitle from "./SectionTitle"
+import ContactLink from "./ContactLink"
 
 export default function Contact() {
     return (<section id="contact" className="py-16">
@@ -23,20 +24,8 @@ export default function Contact() {
                 </Link>
             </div>
             <div className="flex justify-center space-x-6">
-                <Link href="#" target="_blank" rel="noopener noreferrer"
-                    className="hover:text-indigo-600 transition duration-200">
-                    <FaLinkedin size={30} />
-                </Link>
-                <Link href="#" target="_blank" rel="noopener noreferrer"
-                    className="hover:text-indigo-600 transition duration-200">
-                    <FaGithub size={30} />
-                </Link>
-                {/*<Link
-                    href="/Simeon Davenport May 2025 Resume.pdf"
-                    download="Simeon Davenport's Resume"
-                >
-                    Download the pdf
-                </Link>*/}
+                <ContactLink link="https://www.linkedin.com/in/simeon-davenport" Icon={FaLinkedin} />
+                <ContactLink link="https://github.com/davenpos" Icon={FaGithub} />
             </div>
         </div>
     </section>)
