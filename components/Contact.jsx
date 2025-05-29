@@ -30,6 +30,12 @@ export default function Contact() {
                     className="hover:text-indigo-600 transition duration-200">
                     <FaGithub size={30} />
                 </Link>
+                {/*<Link
+                    href="/Simeon Davenport May 2025 Resume.pdf"
+                    download="Simeon Davenport's Resume"
+                >
+                    Download the pdf
+                </Link>*/}
             </div>
         </div>
     </section>)

@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInBackdrop {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes fadeOutBackdrop {
+    from {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.animate-zoomIn {
+    animation: zoomIn 1s ease forwards;
+}
+
+.animate-zoomOut {
+    animation: zoomOut 1s ease forwards;
+}
+
+.animate-fadeInBackdrop {
+    animation: fadeInBackdrop 1s ease forwards;
+}
+
+.animate-fadeOutBackdrop {
+    animation: fadeOutBackdrop 1s ease forwards;
+}
