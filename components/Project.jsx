@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5"
 import { useState, useEffect } from "react"
 import IconLinks from "./IconLinks"
 import Modal from "./Modal"
-import ProjectSkills from "./ProjectSkills"
+import UsedSkills from "./UsedSkills"
 
 export default function Project({ project }) {
     const [showOverlay, setShowOverlay] = useState(false)
@@ -38,9 +38,7 @@ export default function Project({ project }) {
                     <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-indigo-700 transition-all duration-300 group-hover:w-full"></span>
                 </div>
                 <p className="text-gray-600 mb-4">{project.description.brief}</p>
-                <div className="flex flex-wrap space-x-1">
-                    <ProjectSkills project={project} />
-                </div>
+                <UsedSkills skills={project.skills} />
                 <div className="flex space-x-2 mt-2">
                     <IconLinks Icon={FaLink} link={project.link} />
                     <IconLinks Icon={FaGithub} link={project.code} />

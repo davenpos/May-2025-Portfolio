@@ -2,7 +2,7 @@
 import getLogo from "@/functions/getLogo"
 import { useState, useEffect } from "react"
 
-export default function ProjectSkills({ project }) {
+export default function UsedSkills({ skills }) {
     const [size, setSize] = useState(20)
 
     useEffect(() => {
@@ -17,8 +17,8 @@ export default function ProjectSkills({ project }) {
         return () => window.removeEventListener("resize", updateSize)
     })
 
-    return (<>
-        {project.skills.map(skill => {
+    return (<div className="flex flex-wrap space-x-1">
+        {skills.map(skill => {
             const [colorClasses, Icon] = getLogo(skill)
             return (<span
                 key={skill}
@@ -27,5 +27,5 @@ export default function ProjectSkills({ project }) {
                 <Icon size={size} />
             </span>)
         })}
-    </>)
+    </div>)
 }
