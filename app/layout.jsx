@@ -1,6 +1,4 @@
 import "@/public/global.css"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
 
 export const metadata = {
   title: 'Simeon Davenport\'s Portfolio',
@@ -13,10 +11,6 @@ export default function RootLayout({ children }) {
     <head>
       <link rel="icon" href="favicon.ico" sizes="any" />
     </head>
-    <body className="bg-gradient-to-br from-indigo-100 via-white to-cyan-100">
-      <Header />
-      <main className="container mx-auto px-6 py-8">{children}</main>
-      <Footer />
-    </body>
+    <body>{children}</body>
   </html>)
 }
