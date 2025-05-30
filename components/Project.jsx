@@ -71,7 +71,7 @@ export default function Project({ project }) {
             </h3>
             <div className="flex justify-between items-center">
                 <div className="flex flex-wrap items-center gap-y-1 gap-x-2">
-                    <ProjectSkills project={project} />
+                    <UsedSkills skills={project.skills} />
                 </div>
                 <div className="flex space-x-2">
                     <IconLinks Icon={FaLink} link={project.link} />
