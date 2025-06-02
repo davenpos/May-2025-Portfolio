@@ -126,7 +126,7 @@ export default function getLogo(skill) {
             icon = GrMysql
             break
         case "MongoDB":
-            classes = "bg-emerald-400 text-emerald-800"
+            classes = "bg-green-400 text-green-800"
             icon = SiMongodb
             break
         case "Git":

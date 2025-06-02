@@ -1,9 +1,40 @@
 "use client"
 import getLogo from "@/functions/getLogo"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useReducer } from "react"
+import TooltipPortal from "./TooltipPortal"
+
+const defaultTooltip = {
+    visible: false,
+    text: "",
+    x: 0,
+    y: 0
+}
+
+const reducer = (tooltip, action) => {
+    switch (action.type) {
+        case "ENTER":
+            return {
+                ...tooltip,
+                visible: true,
+                text: action.text
+            }
+        case "MOVE":
+            return {
+                ...tooltip,
+                x: action.x,
+                y: action.y
+            }
+        default:
+            return {
+                ...tooltip,
+                visible: false
+            }
+    }
+}
 
 export default function UsedSkills({ skills }) {
     const [size, setSize] = useState(20)
+    const [tooltip, dispatch] = useReducer(reducer, defaultTooltip)
 
     useEffect(() => {
         function updateSize() {
@@ -17,15 +48,40 @@ export default function UsedSkills({ skills }) {
         return () => window.removeEventListener("resize", updateSize)
     })
 
-    return (<div className="flex flex-wrap space-x-1">
-        {skills.map(skill => {
-            const [colorClasses, Icon] = getLogo(skill)
-            return (<span
-                key={skill}
-                className={`p-1 mb-1 rounded-full ${colorClasses}`}
+    return (<div className="relative">
+        <div className="flex flex-wrap space-x-1">
+            {skills.map(skill => {
+                const [colorClasses, Icon] = getLogo(skill)
+                return (<span
+                    key={skill}
+                    className={`p-1 mb-1 rounded-full ${colorClasses}`}
+                    onMouseEnter={() => dispatch({
+                        type: "ENTER",
+                        text: skill
+                    })}
+                    onMouseMove={e => dispatch({
+                        type: "MOVE",
+                        x: e.clientX + 10,
+                        y: e.clientY + 10
+                    })}
+                    onMouseLeave={() => dispatch({ type: "LEAVE" })}
+                >
+                    <Icon size={size} />
+                </span>)
+            })}
+        </div>
+
+        <TooltipPortal>
+            <div
+                className="pointer-events-none fixed z-50 px-2 py-1 text-sm bg-black text-white rounded transition-opacity duration-300"
+                style={{
+                    top: tooltip.y,
+                    left: tooltip.x,
+                    opacity: tooltip.visible ? 1 : 0
+                }}
             >
-                <Icon size={size} />
-            </span>)
-        })}
+                {tooltip.text}
+            </div>
+        </TooltipPortal>
     </div>)
 }
