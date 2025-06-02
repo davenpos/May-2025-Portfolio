@@ -73,11 +73,11 @@ export default function UsedSkills({ skills }) {
 
         <TooltipPortal>
             <div
-                className="pointer-events-none fixed z-50 px-2 py-1 text-sm bg-black text-white rounded transition-opacity duration-300"
+                className="pointer-events-none fixed z-50 px-2 py-1 text-xs md:text-sm bg-black text-white rounded transition-opacity duration-300"
                 style={{
                     top: tooltip.y,
                     left: tooltip.x,
-                    opacity: tooltip.visible ? 1 : 0
+                    opacity: tooltip.visible ? 0.8 : 0
                 }}
             >
                 {tooltip.text}
