@@ -1,7 +1,7 @@
 "use client"
 import getLogo from "@/functions/getLogo"
 import { useState, useEffect, useReducer } from "react"
-import TooltipPortal from "./TooltipPortal"
+import { createPortal } from "react-dom"
 
 const defaultTooltip = {
     visible: false,
@@ -35,6 +35,7 @@ const reducer = (tooltip, action) => {
 export default function UsedSkills({ skills }) {
     const [size, setSize] = useState(20)
     const [tooltip, dispatch] = useReducer(reducer, defaultTooltip)
+    const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
         function updateSize() {
@@ -43,10 +44,11 @@ export default function UsedSkills({ skills }) {
         }
 
         updateSize()
+        setMounted(true)
 
         window.addEventListener("resize", updateSize)
         return () => window.removeEventListener("resize", updateSize)
-    })
+    }, [])
 
     return (<div className="relative">
         <div className="flex flex-wrap space-x-1">
@@ -71,17 +73,15 @@ export default function UsedSkills({ skills }) {
             })}
         </div>
 
-        <TooltipPortal>
-            <div
-                className="pointer-events-none fixed z-50 px-2 py-1 text-xs md:text-sm bg-black text-white rounded transition-opacity duration-300"
-                style={{
-                    top: tooltip.y,
-                    left: tooltip.x,
-                    opacity: tooltip.visible ? 0.8 : 0
-                }}
-            >
-                {tooltip.text}
-            </div>
-        </TooltipPortal>
+        {mounted && createPortal((<div
+            className="pointer-events-none fixed z-50 px-2 py-1 text-xs md:text-sm bg-black text-white rounded transition-opacity duration-300"
+            style={{
+                top: tooltip.y,
+                left: tooltip.x,
+                opacity: tooltip.visible ? 0.8 : 0
+            }}
+        >
+            {tooltip.text}
+        </div>), document.body)}
     </div>)
 }
