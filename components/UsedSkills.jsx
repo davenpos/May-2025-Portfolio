@@ -72,7 +72,6 @@ export default function UsedSkills({ skills }) {
                 </span>)
             })}
         </div>
-
         {mounted && createPortal((<div
             className="pointer-events-none fixed z-50 px-2 py-1 text-xs md:text-sm bg-black text-white rounded transition-opacity duration-300"
             style={{
