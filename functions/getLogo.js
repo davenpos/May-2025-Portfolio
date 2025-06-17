@@ -13,7 +13,6 @@ import {
     FaStripeS
 } from "react-icons/fa"
 import {
-    SiTypescript,
     SiExpress,
     SiStrapi,
     SiEjs,
@@ -29,6 +28,7 @@ import { TbBrandCSharp, TbBrandCpp } from "react-icons/tb"
 import { DiJqueryLogo } from "react-icons/di"
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri"
 import { GrMysql } from "react-icons/gr"
+import { BiLogoTypescript } from "react-icons/bi"
 
 export default function getLogo(skill) {
     let classes
@@ -55,7 +55,7 @@ export default function getLogo(skill) {
             break
         case "TypeScript":
             classes = "bg-blue-400 text-blue-800"
-            icon = SiTypescript
+            icon = BiLogoTypescript
             break
         case "C++":
             classes = "bg-blue-200 text-blue-600"
