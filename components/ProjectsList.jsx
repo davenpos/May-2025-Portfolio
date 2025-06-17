@@ -10,7 +10,7 @@ export default function ProjectsList() {
                 brief: "An e-commerce site built with Next.js, React and Tailwind, utilizing Stripe for payment and a headless WooCommerce",
                 long: "This was a site I helped build at PROJXON. It is an e-commerce site that sells leather products such as wallets, belts, bags and cases. The site is built with Next.js, React and Tailwind. It utilizes Stripe for payment and is synced to a headless WooCommerce. Users can log in or sign up or simply shop as a guest. Logged in users can also view their order history. I worked on various parts of the site including the order history and payment pages and the Stripe integration."
             },
-            skills: ["HTML", "CSS", "JavaScript", "PHP", "Next.js", "React", "Tailwind", "WordPress", "WooCommerce", "Stripe", "AWS EC2"],
+            skills: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Next.js", "React", "Tailwind", "WordPress", "WooCommerce", "Stripe", "AWS EC2"],
             link: "https://zephyraeroleather.com/",
             code: "https://github.com/PROJXON/zephyr-aero-leather"
         },

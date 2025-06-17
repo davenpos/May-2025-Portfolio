@@ -69,7 +69,7 @@ export default function Project({ project }) {
                 </div>
             </div>
         </div>
-        {showOverlay && (createPortal(<div
+        {showOverlay && (createPortal((<div
             className={`fixed inset-0 z-50 flex items-center justify-center ${exiting ? "animate-fadeOutBackdrop" : "animate-fadeInBackdrop"}`}
             onClick={handleClose}
         >
@@ -110,7 +110,6 @@ export default function Project({ project }) {
                     {project.description.long}
                 </p>
             </div>
-        </div>,
-            document.body))}
+        </div>), document.body))}
     </>)
 }
