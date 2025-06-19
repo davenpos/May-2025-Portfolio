@@ -21,9 +21,10 @@ import {
     SiAmazonec2,
     SiAndroidstudio,
     SiSendgrid,
-    SiWoocommerce
+    SiWoocommerce,
+    SiRender
 } from "react-icons/si"
-import { IoLogoJavascript } from "react-icons/io5"
+import { IoLogoJavascript, IoLogoVercel } from "react-icons/io5"
 import { TbBrandCSharp, TbBrandCpp } from "react-icons/tb"
 import { DiJqueryLogo } from "react-icons/di"
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri"
@@ -81,6 +82,10 @@ export default function getLogo(skill) {
             classes = "bg-gray-600 text-black"
             icon = RiNextjsFill
             break
+        case "Vercel":
+            classes = "bg-gray-600 text-black"
+            icon = IoLogoVercel
+            break
         case "jQuery":
             classes = "bg-teal-500 text-teal-900"
             icon = DiJqueryLogo
@@ -128,6 +133,10 @@ export default function getLogo(skill) {
         case "MongoDB":
             classes = "bg-green-400 text-green-800"
             icon = SiMongodb
+            break
+        case "Render":
+            classes = "bg-violet-600 text-violet-950"
+            icon = SiRender
             break
         case "Git":
             classes = "bg-orange-400 text-orange-800"

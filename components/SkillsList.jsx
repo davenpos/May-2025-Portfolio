@@ -21,8 +21,12 @@ export default function SkillsList() {
             skills: ["MySQL", "MongoDB"]
         },
         {
+            type: "Cloud/Deployment",
+            skills: ["AWS EC2", "Vercel", "Render"]
+        },
+        {
             type: "Other",
-            skills: ["Git", "Webpack", "AWS EC2", "Android", "Stripe", "SendGrid"]
+            skills: ["Git", "Webpack", "Android", "Stripe", "SendGrid"]
         }
     ]
 
