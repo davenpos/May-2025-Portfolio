@@ -29,7 +29,7 @@ export default function WorkExperience() {
                 "Creating structured datasets (CSV, JSON, XML) for AI response evaluation.",
                 "Rating and refining model outputs for accuracy and coherence."
             ],
-            skills: ["HTML", "CSS", "JavaScript", "PHP", "TypeScript", "C++", "C#", "Java", "Python", "React", "Next.js", "jQuery", "SASS/SCSS", "Tailwind", "WordPress", "WooCommerce", "Bootstrap", "Node.js", "MySQL", "MongoDB", "Android Studio"]
+            skills: ["HTML", "CSS", "JavaScript", "PHP", "TypeScript", "C++", "C#", "Java", "Python", "React", "Next.js", "jQuery", "SASS/SCSS", "Tailwind", "WordPress", "WooCommerce", "Bootstrap", "Vite", "Node.js", "MySQL", "MongoDB", "Android Studio"]
         },
         {
             title: "Work Placement",

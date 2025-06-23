@@ -10,7 +10,7 @@ export default function SkillsList() {
         },
         {
             type: "Frontend",
-            skills: ["React", "Next.js", "jQuery", "SASS/SCSS", "Tailwind", "WordPress", "WooCommerce", "Bootstrap"]
+            skills: ["React", "Next.js", "jQuery", "SASS/SCSS", "Tailwind", "WordPress", "WooCommerce", "Bootstrap", "Vite"]
         },
         {
             type: "Backend",

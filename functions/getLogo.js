@@ -22,7 +22,8 @@ import {
     SiAndroidstudio,
     SiSendgrid,
     SiWoocommerce,
-    SiRender
+    SiRender,
+    SiVite
 } from "react-icons/si"
 import { IoLogoJavascript, IoLogoVercel } from "react-icons/io5"
 import { TbBrandCSharp, TbBrandCpp } from "react-icons/tb"
@@ -103,7 +104,7 @@ export default function getLogo(skill) {
             icon = FaWordpress
             break
         case "WooCommerce":
-            classes = "bg-purple-500 text-violet-900"
+            classes = "bg-purple-600 text-purple-950"
             icon = SiWoocommerce
             break
         case "Bootstrap":
@@ -162,6 +163,9 @@ export default function getLogo(skill) {
             classes = "bg-sky-100 text-sky-500"
             icon = SiSendgrid
             break
+        case "Vite":
+            classes = "bg-purple-500 text-purple-900"
+            icon = SiVite
     }
 
     return [classes, icon]
