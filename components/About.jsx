@@ -11,6 +11,7 @@ export default function About() {
                     width={250}
                     height={250}
                     className="rounded-full shadow-lg object-cover border-4 border-indigo-200"
+                    priority
                 />
             </div>
             <div className="md:w-2/3 text-center md:text-left">

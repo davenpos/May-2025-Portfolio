@@ -42,7 +42,7 @@ export default function Project({ project }) {
 
     return (<>
         <div
-            className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            className="bg-white rounded-xl shadow-lg overflow-hidden transform will-change-transform hover:scale-105 transition-transform duration-300">
             <div
                 className="w-full relative aspect-video cursor-pointer"
                 onClick={handleOpen}
@@ -81,6 +81,7 @@ export default function Project({ project }) {
                 <button
                     className="absolute top-2 right-5 text-gray-600 hover:text-black text-2xl"
                     onClick={handleClose}
+                    aria-label="Close project overlay"
                 >
                     <IoClose className="cursor-pointer transition-colors duration-300" />
                 </button>
