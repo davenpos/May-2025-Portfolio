@@ -1,6 +1,12 @@
 export default function Page() {
-    return (<embed src="/resume.pdf" type="application/pdf" style={{
+  return (
+    <embed
+      src="/resume.pdf"
+      type="application/pdf"
+      style={{
         height: '100vh',
-        width: '100%'
-    }} />)
+        width: '100%',
+      }}
+    />
+  );
 }
