@@ -20,7 +20,6 @@ import {
   SiWebpack,
   SiAmazonec2,
   SiAndroidstudio,
-  SiSendgrid,
   SiWoocommerce,
   SiRender,
   SiVite,
@@ -158,10 +157,6 @@ export default function getLogo(skill) {
     case 'Stripe':
       classes = 'bg-indigo-300 text-indigo-700';
       icon = FaStripeS;
-      break;
-    case 'SendGrid':
-      classes = 'bg-sky-100 text-sky-500';
-      icon = SiSendgrid;
       break;
     case 'Vite':
       classes = 'bg-purple-500 text-purple-900';
