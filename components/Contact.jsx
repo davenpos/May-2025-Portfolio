@@ -2,9 +2,27 @@ import Link from 'next/link';
 import { IoMdMail } from 'react-icons/io';
 import { FaPhoneAlt, FaLinkedin, FaGithub, FaFilePdf } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
-import ContactLink from './ContactLink';
+import IconLink from './IconLink';
 
 export default function Contact() {
+  const contactLinks = [
+    {
+      Icon: FaLinkedin,
+      link: 'https://www.linkedin.com/in/simeon-davenport',
+      ariaLabel: 'My LinkedIn page',
+    },
+    {
+      Icon: FaGithub,
+      link: 'https://github.com/davenpos',
+      ariaLabel: 'My GitHub page',
+    },
+    {
+      Icon: FaFilePdf,
+      link: '/resume',
+      ariaLabel: 'My resume',
+    },
+  ];
+
   return (
     <section id="contact" className="py-16">
       <SectionTitle text="Get In Touch" mb={12} />
@@ -17,6 +35,7 @@ export default function Contact() {
           <Link
             href="mailto:simeon.davenport@mail.com"
             className="flex items-center space-x-2 text-lg hover:text-indigo-600 conversion duration-200"
+            aria-label="Send me an email"
           >
             <IoMdMail size={30} />
             <span>simeon.davenport@mail.com</span>
@@ -24,15 +43,21 @@ export default function Contact() {
           <Link
             href="tel:+12264023639"
             className="flex items-center space-x-2 text-lg hover:text-indigo-600 transition duration-200"
+            aria-label="Call me"
           >
             <FaPhoneAlt size={30} />
             <span>+1 (226) 402-3639</span>
           </Link>
         </div>
         <div className="flex justify-center space-x-6">
-          <ContactLink link="https://www.linkedin.com/in/simeon-davenport" Icon={FaLinkedin} />
-          <ContactLink link="https://github.com/davenpos" Icon={FaGithub} />
-          <ContactLink link="/resume" Icon={FaFilePdf} />
+          {contactLinks.map((link, i) => (
+            <IconLink
+              key={i}
+              {...link}
+              className="hover:text-indigo-600 transition duration-200"
+              iconSize={30}
+            />
+          ))}
         </div>
       </div>
     </section>

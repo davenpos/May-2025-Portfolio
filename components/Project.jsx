@@ -5,7 +5,7 @@ import { FaLink } from 'react-icons/fa6';
 import { IoClose } from 'react-icons/io5';
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import IconLinks from './IconLinks';
+import IconLink from './IconLink';
 import UsedSkills from './UsedSkills';
 
 export default function Project({ project }) {
@@ -61,8 +61,8 @@ export default function Project({ project }) {
           <p className="text-gray-600 mb-4">{project.description.brief}</p>
           <UsedSkills skills={project.skills} />
           <div className="flex space-x-2 mt-2">
-            <IconLinks Icon={FaLink} link={project.link} />
-            <IconLinks Icon={FaGithub} link={project.code} />
+            <IconLink Icon={FaLink} link={project.link} ariaLabel="Project link" />
+            <IconLink Icon={FaGithub} link={project.code} ariaLabel="GitHub code" />
           </div>
         </div>
       </div>
@@ -105,8 +105,8 @@ export default function Project({ project }) {
                   <UsedSkills skills={project.skills} />
                 </div>
                 <div className="flex space-x-2">
-                  <IconLinks Icon={FaLink} link={project.link} />
-                  <IconLinks Icon={FaGithub} link={project.code} />
+                  <IconLink Icon={FaLink} link={project.link} ariaLabel="Project link" />
+                  <IconLink Icon={FaGithub} link={project.code} ariaLabel="GitHub code" />
                 </div>
               </div>
               <p className="text-gray-700 whitespace-pre-line text-sm md:text-base">
