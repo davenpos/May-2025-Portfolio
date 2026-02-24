@@ -35,7 +35,7 @@ export default function WorkExperience() {
       company: 'DataAnnotation',
       dates: {
         start: 'May 2024',
-        end: 'Present',
+        end: 'Aug 2025',
       },
       bullets: [
         'Training and optimizing chatbot models using Python, JavaScript, C++, etc.',

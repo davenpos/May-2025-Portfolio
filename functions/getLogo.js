@@ -11,6 +11,7 @@ import {
   FaBootstrap,
   FaGitAlt,
   FaStripeS,
+  FaShopify,
 } from 'react-icons/fa';
 import {
   SiExpress,
@@ -151,7 +152,7 @@ export default function getLogo(skill) {
       icon = SiAmazonec2;
       break;
     case 'Android Studio':
-      classes = 'bg-lime-400 text-lime-800';
+      classes = 'bg-emerald-400 text-emerald-800';
       icon = SiAndroidstudio;
       break;
     case 'Stripe':
@@ -161,6 +162,10 @@ export default function getLogo(skill) {
     case 'Vite':
       classes = 'bg-purple-500 text-purple-900';
       icon = SiVite;
+      break;
+    case 'Shopify':
+      classes = 'bg-lime-400 text-lime-800';
+      icon = FaShopify;
   }
 
   return [classes, icon];

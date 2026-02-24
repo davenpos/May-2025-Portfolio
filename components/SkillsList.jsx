@@ -20,6 +20,7 @@ export default function SkillsList() {
         'WooCommerce',
         'Bootstrap',
         'Vite',
+        'Shopify',
       ],
     },
     {
