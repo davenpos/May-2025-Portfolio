@@ -29,7 +29,7 @@ export default function SkillsList() {
     },
     {
       type: 'Databases',
-      skills: ['MySQL', 'MongoDB'],
+      skills: ['MySQL', 'MongoDB', 'PostgreSQL'],
     },
     {
       type: 'Cloud/Deployment',
@@ -37,7 +37,7 @@ export default function SkillsList() {
     },
     {
       type: 'Other',
-      skills: ['Git', 'Webpack', 'Android', 'Stripe'],
+      skills: ['Git', 'Prisma', 'Webpack', 'Android', 'Stripe'],
     },
   ];
 

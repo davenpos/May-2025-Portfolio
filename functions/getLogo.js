@@ -24,6 +24,8 @@ import {
   SiWoocommerce,
   SiRender,
   SiVite,
+  SiPrisma,
+  SiPostgresql,
 } from 'react-icons/si';
 import { IoLogoJavascript, IoLogoVercel } from 'react-icons/io5';
 import { TbBrandCSharp, TbBrandCpp } from 'react-icons/tb';
@@ -166,6 +168,15 @@ export default function getLogo(skill) {
     case 'Shopify':
       classes = 'bg-lime-400 text-lime-800';
       icon = FaShopify;
+      break;
+    case 'Prisma':
+      classes = 'bg-blue-700 text-black';
+      icon = SiPrisma;
+      break;
+    case 'PostgreSQL':
+      classes = 'bg-cyan-600 text-cyan-950';
+      icon = SiPostgresql;
+      break;
   }
 
   return [classes, icon];

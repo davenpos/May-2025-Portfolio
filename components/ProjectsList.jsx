@@ -4,26 +4,26 @@ import SectionTitle from './SectionTitle';
 export default function ProjectsList() {
   const projects = [
     {
-      name: 'Trail Map Report',
-      image: '/images/projects/trailmapreport.jpg',
+      name: "Simeon's Best Hit Songs",
+      image: '/images/projects/besthitsongs.png',
       description: {
         brief:
-          'A simple WordPress site where users can set trails as either "open" or "closed" and see the updated map tooltip.',
-        long: 'This is a test task I did for a WordPress job I applied for. It is a simple WordPress site with two pages. On the main page, there is a form where users can set 5 trails as either "open" or "closed", submit the form, then go to the Report Page, hover over the trails on the trail map (or tap on mobile) and view each trail\'s status from the most recent submission to the form. The site uses jQuery and SCSS instead of vanilla JS and CSS and is deployed online with AWS EC2.',
+          'A Next.js/React/Tailwind site with a PostgreSQL backend listing my favorite Billboard hit songs.',
+        long: "This site displays my favorite Billboard Year-End Hot 100 songs in a table, inspired by the various Best Hit Songs videos I've made on YouTube. Users can view what my favorite hit songs of all time are, or they can narrow it down by decade or by year. They can also click on a song to learn more information about the song. All song information is stored in a Neon PostgreSQL database, fetched via Prisma. It also includes an admin backend allowing me to add, edit or reorder songs in the database.",
       },
       skills: [
         'HTML',
         'CSS',
         'JavaScript',
-        'PHP',
-        'WordPress',
-        'Node.js',
-        'jQuery',
-        'SCSS',
-        'AWS EC2',
+        'Next.js',
+        'React',
+        'Tailwind',
+        'PostgreSQL',
+        'Prisma',
+        'Vercel',
       ],
-      link: 'https://trailmapreport.simeondavenport.com/',
-      code: 'https://github.com/davenpos/Trail-Map-Report',
+      link: 'https://simeon-s-best-hit-songs.vercel.app/',
+      code: 'https://github.com/davenpos/Simeon-s-Best-Hit-Songs',
     },
     {
       name: 'Zephyr Aero Leather',
