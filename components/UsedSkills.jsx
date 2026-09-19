@@ -1,5 +1,6 @@
 'use client';
 import getLogo from '@/functions/getLogo';
+import useWindowSizeState from '@/hooks/useWindowSizeState';
 import { useState, useEffect, useReducer } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -33,22 +34,11 @@ const reducer = (tooltip, action) => {
 };
 
 export default function UsedSkills({ skills }) {
-  const [size, setSize] = useState(20);
   const [tooltip, dispatch] = useReducer(reducer, defaultTooltip);
   const [mounted, setMounted] = useState(false);
+  const size = useWindowSizeState(20, 25);
 
-  useEffect(() => {
-    function updateSize() {
-      if (window.innerWidth >= 768) setSize(25);
-      else setSize(20);
-    }
-
-    updateSize();
-    setMounted(true);
-
-    window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   return (
     <div className="relative">
@@ -91,7 +81,7 @@ export default function UsedSkills({ skills }) {
           >
             {tooltip.text}
           </div>,
-          document.body
+          document.body,
         )}
     </div>
   );

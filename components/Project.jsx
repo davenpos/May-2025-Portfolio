@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import IconLink from './IconLink';
 import UsedSkills from './UsedSkills';
+import UnderlineLink from './UnderlineLink';
 
 export default function Project({ project }) {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -52,12 +53,7 @@ export default function Project({ project }) {
           />
         </div>
         <div className="p-6">
-          <div className="group relative inline-block mb-2" onClick={handleOpen}>
-            <h3 className="text-2xl font-semibold text-indigo-600 group-hover:text-indigo-700 cursor-pointer transition-colors duration-300">
-              {project.name}
-            </h3>
-            <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-indigo-700 transition-all duration-300 group-hover:w-full"></span>
-          </div>
+          <UnderlineLink text={project.name} link={handleOpen} a={false} />
           <p className="text-gray-600 mb-4">{project.description.brief}</p>
           <UsedSkills skills={project.skills} />
           <div className="flex space-x-2 mt-2">
@@ -114,7 +110,7 @@ export default function Project({ project }) {
               </p>
             </div>
           </div>,
-          document.body
+          document.body,
         )}
     </>
   );

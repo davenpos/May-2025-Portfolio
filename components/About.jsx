@@ -20,7 +20,7 @@ export default function About() {
           <h2 className="text-2xl text-gray-700 mb-6">Web Developer</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
             Welcome to my personal portfolio! I am a web developer and computer programmer with a
-            Bachelor's Degree in Computer Science and about eight years of combined work and study
+            Bachelor's Degree in Computer Science and about nine years of combined work and study
             under my belt. In particular, I am especially skilled in Node.js, Next.js, React and
             WordPress. I also know several object-oriented languages such as C++, C# and Java. Feel
             free to explore my work and get in touch!

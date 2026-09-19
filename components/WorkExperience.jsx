@@ -26,7 +26,7 @@ export default function WorkExperience() {
         'WooCommerce',
         'Bootstrap',
         'Git',
-        'AWS EC2',
+        'AWS',
         'Stripe',
       ],
     },

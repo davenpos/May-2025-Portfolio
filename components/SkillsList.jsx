@@ -33,7 +33,7 @@ export default function SkillsList() {
     },
     {
       type: 'Cloud/Deployment',
-      skills: ['AWS EC2', 'Vercel', 'Render'],
+      skills: ['AWS', 'Vercel', 'Render'],
     },
     {
       type: 'Other',

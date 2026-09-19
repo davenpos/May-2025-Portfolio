@@ -12,6 +12,7 @@ import {
   FaGitAlt,
   FaStripeS,
   FaShopify,
+  FaAws,
 } from 'react-icons/fa';
 import {
   SiExpress,
@@ -19,7 +20,6 @@ import {
   SiEjs,
   SiMongodb,
   SiWebpack,
-  SiAmazonec2,
   SiAndroidstudio,
   SiWoocommerce,
   SiRender,
@@ -149,9 +149,9 @@ export default function getLogo(skill) {
       classes = 'bg-sky-200 text-sky-600';
       icon = SiWebpack;
       break;
-    case 'AWS EC2':
+    case 'AWS':
       classes = 'bg-amber-400 text-amber-800';
-      icon = SiAmazonec2;
+      icon = FaAws;
       break;
     case 'Android Studio':
       classes = 'bg-emerald-400 text-emerald-800';
